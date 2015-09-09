@@ -21,3 +21,28 @@ app.controller('BioController', function($scope) {
 app.controller('ResumeController', function($scope) {
   $scope.message='Here is the resume';
 })
+
+app.controller('AddController', function($scope, $routeParams) {
+  $scope.numberOne = $routeParams.x;
+  $scope.numberTwo = $routeParams.y;
+  $scope.total = Number($routeParams.x) + Number($routeParams.y);
+})
+
+app.controller('DivideController', function($scope, $routeParams) {
+  $scope.numberOne = $routeParams.x;
+  $scope.numberTwo = $routeParams.y;
+  $scope.total = Number($routeParams.x) / Number($routeParams.y);
+})
+
+
+
+
+
+
+
+
+
+
+
+
+//
