@@ -1,6 +1,6 @@
 var app = angular.module('angularRouting', ['ngRoute']);
 
-app.config(function($routeProvider) {
+app.config(function($routeProvider, $locationProvider) {
     $routeProvider
       .when('/projects', {
         templateUrl: 'partials/projects.html',
@@ -24,6 +24,8 @@ app.config(function($routeProvider) {
         controller: 'DivideController'
       })
       .otherwise({redirectTo: '/'});
+      $locationProvider.html5Mode(true);
+
 });
 
 

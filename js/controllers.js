@@ -10,7 +10,7 @@
 // })
 
 app.controller('ProjectsController', function($scope) {
-  $scope.message='Here are some projects';
+  $scope.message='Here there be projects.';
   // $scope.title = 'Projects';
 })
 
@@ -23,6 +23,8 @@ app.controller('ResumeController', function($scope) {
 })
 
 app.controller('AddController', function($scope, $routeParams) {
+  console.log('*********************', $routeParams);
+  // console.log($location.search.x);
   $scope.numberOne = $routeParams.x;
   $scope.numberTwo = $routeParams.y;
   $scope.total = Number($routeParams.x) + Number($routeParams.y);
